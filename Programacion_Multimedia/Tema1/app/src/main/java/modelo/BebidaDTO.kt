@@ -1,10 +1,10 @@
 package modelo
 
-data class Bebida (
+data class BebidaDTO (
 
     var nombre:String,
     var precio:Double,
-    var size: Size
+    var size: Size?
 
 ) {
 

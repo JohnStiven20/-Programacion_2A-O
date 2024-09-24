@@ -4,17 +4,29 @@ import java.util.Date
 
 enum class EstadoPedido{PEDIENTE, ENTREGADO, CANCELADO}
 
-data class PedidoDTO (
+class PedidoDTO (
 
     var fehca:Date,
     var precioTotal:Float,
     var estado:EstadoPedido,
-    var listaLineasPedididos:MutableList<LineaPedido> = mutableListOf()
+    var listaLineasPedididos:MutableList<LineaPedidoDTO> = mutableListOf()
 
 ) {
 
-    fun agregarLineaPedido(cantidad:Int) {
-        var lineaPedido = LineaPedido(cantidad)
-        listaLineasPedididos.add(lineaPedido)
+    fun agregarLineaPedido(cantidad:Int, nombre:String, precio:Double, size: Size?, opcion:String) {
+
+//        if (opcion.equals("1"))  {
+//            var pizzaDTO = PizzaDTO(nombre,precio,size)
+//            listaLineasPedididos.add(pizzaDTO)
+//        } else if (opcion.equals("2")) {
+//            var pastaDTO = PastaDTO(nombre,precio)
+//            var lineaPedididos1 = LineaPedidoDTO(cantidad,null,pastaDTO)
+//            listaLineasPedididos.add(lineaPedididos1)
+//        } else {
+//            var bebidaDTO = BebidaDTO(nombre,precio,size)
+//            var lineaPedididos2 = LineaPedidoDTO(cantidad, null,null, bebidaDTO)
+//            listaLineasPedididos.add(lineaPedididos2)
+//        }
+
     }
 }
